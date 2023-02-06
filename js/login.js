@@ -42,7 +42,7 @@ function bindActionButtons(){
                 data: parameters,
                 success: function (data) { 
                     CookieClass.createCookie(data);
-                    console.log("Login Success");
+                    App.redirectUser(CookieClass.getCookie("role"));
                     
                 },
                 error: function (error) { 

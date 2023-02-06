@@ -22,11 +22,8 @@ class App {
                 return true;
             },
             error: function (error) { 
-                console.log(userRole, User.USER);
-                if(userRole == User.USER)
-                    window.location.href = "/likhaph/redlife.ph/index.php";
-                else if(userRole == User.ADMIN)
-                    window.location.href = "/likhaph/redlife.ph/login.php";
+                if(userRole == User.ADMIN)
+                    window.location.href = "/login.php";
             }
         });
     }
@@ -84,14 +81,11 @@ class App {
     }
 
     //VALIDATE USER UPON LOGIN            
-    static checkUser(){
-        let user_role = CookieClass.getCookie("role");
-        if(user_role == "Admin"){
-            
+    static redirectUser(){
+        let role = CookieClass.getCookie(User.ROLE);
+        if(role == "Admin"){
+            window.location.href = "module/admin/index.php";
         }
-            //window.location.href = "module/admin/index.php";
-        else if(user_role == "User")
-            window.location.href = "module/user/donate/index.php";    
     }
 
     //CONVERT FORM DATA TO OBJECT

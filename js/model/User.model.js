@@ -1,33 +1,24 @@
 //User enums
 const ID = "id";
-const ID_DONOR = "id_donor";
-const EMAIL = "email";
-const FIRST_NAME = "first_name";
-const LAST_NAME = "last_name";
-const PHONE_NUMBER = "phone_number";
+const FULL_NAME = "full_name"; 
+const EMAIL_ADDRESS = "email_address";
+const USERNAME = "username";
 const TOKEN = "token";
-const USER_ROLE = "user_role";
-const BLOOD_TYPE = "blood_type";
-const GENDER = "gender";
-const BIRTH_DATE = "birth_date";
+const ROLE = "role";
+const DEL = "del";
+const DATE_ADDED = "date_added";
 
 const ADMIN = "Admin";
-const USER = "User";
 
 class User {
     static get ID(){            return ID;              }       
-    static get ID_DONOR(){      return ID_DONOR;        }       
-    static get EMAIL(){         return EMAIL;           }
-    static get FIRST_NAME(){    return FIRST_NAME;      }
-    static get LAST_NAME(){     return LAST_NAME;       }
-    static get PHONE_NUMBER(){  return PHONE_NUMBER;    }
-    static get TOKEN() {        return TOKEN;           }
-    static get USER_ROLE() {    return USER_ROLE;       }
-    static get ADMIN() {        return ADMIN;           }
-    static get USER() {         return USER;            }
-    static get BLOOD_TYPE() {   return BLOOD_TYPE;      }
-    static get GENDER() {       return GENDER;          }
-    static get BIRTH_DATE() {   return BIRTH_DATE;      }
+    static get FULL_NAME(){     return FULL_NAME;       }       
+    static get EMAIL_ADDRESS(){ return EMAIL_ADDRESS;   }       
+    static get USERNAME(){      return USERNAME;        }       
+    static get TOKEN(){         return TOKEN;           }       
+    static get ROLE(){          return ROLE;            }       
+    static get DEL(){           return DEL;             }       
+    static get ADMIN(){         return ADMIN;           }       
 
 }
     

@@ -11,8 +11,7 @@ $(document).ready(function() {
     App.checkIfLoggedIn(userRole);
     App.handlePageRestore();
     renderProfileDetails();
-    renderFilter();
-    getAppointments();
+    //renderFilter();
     getDonations();
 });
 
@@ -27,7 +26,7 @@ function bindActionButtons (){
     App.searchBar();
     
     //CREATE NEW DONATION
-    $(".add-new-donation-button").on("click", function(e){
+    $(".add-new-learner-button").on("click", function(e){
         e.preventDefault();
         resetForm();
         renderModal("create");
@@ -35,7 +34,7 @@ function bindActionButtons (){
 
     $(".close-modal").on("click", function (e) {
         e.preventDefault();
-        $("#new-donation-modal").modal("hide");
+        $("#new-learner-modal").modal("hide");
         $("#confirm-modal").modal("hide");
     }); 
 
@@ -585,10 +584,9 @@ function renderFilter (){
 }
 
 function renderProfileDetails (){
-    let firstName = CookieClass.getCookie(User.FIRST_NAME);
-    let lastName = CookieClass.getCookie(User.LAST_NAME);
-    let emailAddress = CookieClass.getCookie(User.EMAIL);
-    $("#profile-name").text(firstName + " " + lastName);
+    let fullName = CookieClass.getCookie(User.FULL_NAME);
+    let emailAddress = CookieClass.getCookie(User.EMAIL_ADDRESS);
+    $("#profile-name").text(fullName);
     $("#email-address").text(emailAddress);
 }
 
@@ -778,14 +776,13 @@ function validateForm() {
 function renderModal(action) {
 
     if (action == "create") {
-        $("#new-donation-modal").modal("show");
+        $("#new-learner-modal").modal("show");
 
-        $(".modal-title").html("Add New Donation");
+        $(".modal-title").html("Add New Learner");
         $("#submit-form").val("Create");
         $("#method").val("create");
-        $("#product-id-section").attr("hidden", true);
-        $("#search-appointment-section").prop("hidden", false);
-        $("#donation-section").prop("hidden", true);
+        // $("#product-id-section").attr("hidden", true);
+        // $("#search-appointment-section").prop("hidden", false);
         $("#first-name").prop("readonly", false);
         $("#last-name").prop("readonly", false); 
         $("#birth-date").prop("readonly", false);
