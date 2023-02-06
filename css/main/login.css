@@ -1,0 +1,22 @@
+body {
+    color: #5a5a5a;
+  }
+
+  /* HEADER */
+img.arkanghel-logo{
+	width: 100px;
+	height: 100px;
+	padding: 5px;
+}
+
+/* BODY */
+.error-msg{
+  text-align: center;
+  padding: 10px;
+  font-size: small;
+}
+
+/* FOOTER */
+.container{
+  position: relative;
+}
