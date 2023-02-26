@@ -127,7 +127,7 @@
                     </tbody>
                 </table>
             </div>
-            <!-- CREATE NEW CAMPAIGN & UPDATE CAMPAIGN -->
+            <!--ADD and UPDATE LEARNER -->
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                 <div id="new-learner-modal" class="modal" tabindex="-1">
                     <div class="modal-dialog modal-xl modal-dialog-centered">
@@ -155,39 +155,98 @@
 
                                       <br><h5>Personal Information</h5>
                                       <hr>
-                                      <div class="row align-items-start">   
+                                      <div class="row align-items-start">   <!--row 1 -->
 
-                                          <div class="col-4">
-                                              <label for="uli-number">Sex</label>
+                                        <div class="col-4">
+                                            <label for="uli-number">Sex</label>
+                                            <div class="row align-items-start">  
 
-                                              <div class="row align-items-start">  
+                                              <div class="col-3">
+                                                <input class="form-check-input" type="radio" value="Male" name="sex-radio" id="sex-male">
+                                                <label class="form-check-label" for="sex-male">
+                                                  Male
+                                                </label>
+                                              </div>
 
-                                                <div class="col-3">
-                                                  <input class="form-check-input" type="radio" value="1" name="sex-radio" id="sex-male">
-                                                  <label class="form-check-label" for="sex-male">
-                                                    Male
-                                                  </label>
-                                                </div>
-
-                                                <div class="col-9">
-                                                  <input class="form-check-input" type="radio" value="2"  name="sex-radio" id="sex-female">
-                                                  <label class="form-check-label" for="sex-female">
-                                                    Female
-                                                  </label>
-                                                </div>
-                                            </div>
+                                              <div class="col-9">
+                                                <input class="form-check-input" type="radio" value="Female"  name="sex-radio" id="sex-female">
+                                                <label class="form-check-label" for="sex-female">
+                                                  Female
+                                                </label>
+                                              </div>
                                           </div>
-                                          
-                                          <div class="col-8">
-                                            <label for="entry-date">Civil Status</label>
-                                            <input type="date" class="form-control" id="entry-date" name="entry_date">
-                                          </div>
-                                      </div>
-
-                                  
-                                        <div class="pt-3 text-center">
-                                            <span class="fst-italic text-danger error-message"></span>
                                         </div>
+                                          
+                                        <div class="col-4">
+                                            <label for="entry-date">Civil  Status</label>
+                                            <select class="form-select form-select-sm" id ="civil-status-dropdown">
+                                              <option selected disabled>Select</option>
+                                              <option value="Single">Single</option>
+                                              <option value="Married">Married</option>
+                                              <option value="Widower">Widow/er</option>
+                                              <option value="Separated">Separated</option>
+                                              <option value="Solo Parent">Solo Parent</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-4">
+                                          <label for="entry-date">Employment Status (before the training)</label>
+                                          <select class="form-select form-select-sm" id ="employment-status-dropdown">
+                                              <option selected disabled>Select</option>
+                                              <option value="Employed">Employed</option>
+                                              <option value="Unemployed">Unemployed</option>
+                                            </select>                                          
+                                        </div>
+                                      </div> <!--end row 1 -->
+
+                                      <div class="row align-items-start">   <!--row 2 -->
+
+                                        <div class="col-4">
+                                            <label for="uli-number">Sex</label>
+                                            <div class="row align-items-start">  
+
+                                              <div class="col-3">
+                                                <input class="form-check-input" type="radio" value="Male" name="sex-radio" id="sex-male">
+                                                <label class="form-check-label" for="sex-male">
+                                                  Male
+                                                </label>
+                                              </div>
+
+                                              <div class="col-9">
+                                                <input class="form-check-input" type="radio" value="Female"  name="sex-radio" id="sex-female">
+                                                <label class="form-check-label" for="sex-female">
+                                                  Female
+                                                </label>
+                                              </div>
+                                          </div>
+
+                                        </div>
+                                          
+                                        <div class="col-4">
+                                            <label for="entry-date">Civil  Status</label>
+                                            <select class="form-select form-select-sm" id ="civil-status-dropdown">
+                                              <option selected disabled>Select</option>
+                                              <option value="Single">Single</option>
+                                              <option value="Married">Married</option>
+                                              <option value="Widower">Widow/er</option>
+                                              <option value="Separated">Separated</option>
+                                              <option value="Solo Parent">Solo Parent</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-4">
+                                          <label for="entry-date">Employment Status (before the training)</label>
+                                          <select class="form-select form-select-sm" id ="employment-status-dropdown">
+                                              <option selected disabled>Select</option>
+                                              <option value="Employed">Employed</option>
+                                              <option value="Unemployed">Unemployed</option>
+                                            </select>                                          
+                                        </div>
+                                      </div> <!-- end row 2 -->
+                                    
+                                    <div class="pt-3 text-center">
+                                      <h1>Testing</h1>
+                                      <span class="fst-italic text-danger error-message"></span>
                                     </div>
                                 </div>
                             </form>
