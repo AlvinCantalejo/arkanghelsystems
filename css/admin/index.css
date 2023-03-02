@@ -2,6 +2,10 @@ body {
   font-size: .875rem;
 }
 
+
+label.label-form{
+  font-style: italic;
+}
 /* HEADER 
 -------------------------------------------------- */
 header{

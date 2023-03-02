@@ -144,11 +144,11 @@
                                       <hr>
                                       <div class="row align-items-start">   
                                           <div class="col-8">
-                                              <label for="uli-number">ULI Number</label>
+                                              <label for="uli-number" class="label-form">ULI Number</label>
                                               <input type="text" class="form-control" id="uli-number" name="uli_number" placeholder="XXXXXXXXXX-XXX" >
                                           </div>
                                           <div class="col-4">
-                                            <label for="entry-date">Entry Date</label>
+                                            <label for="entry-date" class="label-form">Entry Date</label>
                                             <input type="date" class="form-control" id="entry-date" name="entry_date">
                                           </div>
                                       </div>
@@ -158,18 +158,18 @@
                                       <div class="row align-items-start">   <!--row 1 -->
 
                                         <div class="col-4">
-                                            <label for="uli-number">Sex</label>
+                                            <label class="label-form">Sex</label>
                                             <div class="row align-items-start">  
 
                                               <div class="col-3">
-                                                <input class="form-check-input" type="radio" value="Male" name="sex-radio" id="sex-male">
+                                                <input class="form-check-input" type="radio" value="Male" name="sex_radio" id="sex-male">
                                                 <label class="form-check-label" for="sex-male">
                                                   Male
                                                 </label>
                                               </div>
 
                                               <div class="col-9">
-                                                <input class="form-check-input" type="radio" value="Female"  name="sex-radio" id="sex-female">
+                                                <input class="form-check-input" type="radio" value="Female"  name="sex_radio" id="sex-female">
                                                 <label class="form-check-label" for="sex-female">
                                                   Female
                                                 </label>
@@ -178,70 +178,65 @@
                                         </div>
                                           
                                         <div class="col-4">
-                                            <label for="entry-date">Civil  Status</label>
+                                            <label for="entry-date" class="label-form">Civil  Status</label>
                                             <select class="form-select form-select-sm" id ="civil-status-dropdown">
                                               <option selected disabled>Select</option>
-                                              <option value="Single">Single</option>
-                                              <option value="Married">Married</option>
-                                              <option value="Widower">Widow/er</option>
-                                              <option value="Separated">Separated</option>
-                                              <option value="Solo Parent">Solo Parent</option>
+                                              <option value="0">Single</option>
+                                              <option value="1">Married</option>
+                                              <option value="2">Widow/er</option>
+                                              <option value="3">Separated</option>
+                                              <option value="4">Solo Parent</option>
                                             </select>
                                         </div>
 
                                         <div class="col-4">
-                                          <label for="entry-date">Employment Status (before the training)</label>
-                                          <select class="form-select form-select-sm" id ="employment-status-dropdown">
-                                              <option selected disabled>Select</option>
-                                              <option value="Employed">Employed</option>
-                                              <option value="Unemployed">Unemployed</option>
-                                            </select>                                          
+                                          <label for="entry-date" class="label-form">Employment Status (before the training)</label>
+                                          <select class="form-select form-select-sm" id ="employment-status-dropdown" name="employment_status">
+                                            <option selected disabled>Select</option>
+                                            <option value="0">Employed</option>
+                                            <option value="1">Unemployed</option>
+                                          </select>                                          
                                         </div>
                                       </div> <!--end row 1 -->
-
+                                      
+                                      <br>
                                       <div class="row align-items-start">   <!--row 2 -->
 
-                                        <div class="col-4">
-                                            <label for="uli-number">Sex</label>
-                                            <div class="row align-items-start">  
+                                        <div class="col-3">
+                                          <label for="entry-date" class="label-form">Birth Date</label>
+                                          <input type="date" class="form-control" id="birth-date" name="birth_date">
+                                        </div>
 
-                                              <div class="col-3">
-                                                <input class="form-check-input" type="radio" value="Male" name="sex-radio" id="sex-male">
-                                                <label class="form-check-label" for="sex-male">
-                                                  Male
-                                                </label>
-                                              </div>
-
-                                              <div class="col-9">
-                                                <input class="form-check-input" type="radio" value="Female"  name="sex-radio" id="sex-female">
-                                                <label class="form-check-label" for="sex-female">
-                                                  Female
-                                                </label>
-                                              </div>
-                                          </div>
-
+                                        <div class="col-1">
+                                          <label for="entry-date" class="label-form">Age</label>
+                                          <input type="text" class="form-control" id="age" name="age" readonly>
                                         </div>
                                           
                                         <div class="col-4">
-                                            <label for="entry-date">Civil  Status</label>
-                                            <select class="form-select form-select-sm" id ="civil-status-dropdown">
-                                              <option selected disabled>Select</option>
-                                              <option value="Single">Single</option>
-                                              <option value="Married">Married</option>
-                                              <option value="Widower">Widow/er</option>
-                                              <option value="Separated">Separated</option>
-                                              <option value="Solo Parent">Solo Parent</option>
-                                            </select>
+                                            <label for="entry-date" class="label-form">Birth Place</label>
+                                            <input type="text" class="form-control" id="birth-place" name="birth_place">
                                         </div>
 
                                         <div class="col-4">
-                                          <label for="entry-date">Employment Status (before the training)</label>
-                                          <select class="form-select form-select-sm" id ="employment-status-dropdown">
+                                          <label for="entry-date" class="label-form">Educational Attainment (before the training)</label>
+                                          <select class="form-select form-select-sm" id ="educational-attainment-dropdown" name="educational_attainment" >
                                               <option selected disabled>Select</option>
-                                              <option value="Employed">Employed</option>
-                                              <option value="Unemployed">Unemployed</option>
+                                              <option value="0">Pre-School (Nursery/Kinder/Prep)</option>
+                                              <option value="1">No Grade Completed</option>
+                                              <option value="2">Elementary Undergraduate</option>
+                                              <option value="3">Elementary Graduate</option>
+                                              <option value="4">High School Undergraduate</option>
+                                              <option value="5">High School Graduate</option>
+                                              <option value="6">Junior High School Graduate</option>
+                                              <option value="7">Senior High School Graduate</option>
+                                              <option value="8">Post Secondary Undergraduate</option>
+                                              <option value="9">Post Secondary Graduate</option>
+                                              <option value="10">College Undergraduate</option>
+                                              <option value="11">College Graduate or Higher</option>
                                             </select>                                          
                                         </div>
+
+
                                       </div> <!-- end row 2 -->
                                     
                                     <div class="pt-3 text-center">
